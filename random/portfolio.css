@@ -151,7 +151,8 @@ div.post {
     height: 300px; /* Adjust the height to match the desired square size */
     padding: 20px; 
     border-radius: 5px; 
-    display: block; 
+    display: flex; 
+    flex-wrap:wrap;
     margin-right: 10px;
 }
 
