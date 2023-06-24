@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Tsukimi+Rounded:wght@700&display=swap');
+
+
+:root {
+    color: black;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    font-size: 1.4rem;
+    line-height: 18px;
+}
+
+
+body{
+    font-family: 'Cairo', sans-serif;
+    padding-top: 50px;
+}
+h1 {
+    font-weight: bold; 
+    font-size: 1.75rem; 
+}
+
+h2 {
+    font-weight: light;
+    font-size: 1.25rem; 
+    line-height: 1.4em;
+}
+
+p1 {
+    font-family: 'Cairo', sans-serif;
+    font-weight: lighter;
+    font-size: 20px ; 
+    line-height: 1.4em;
+}
+p2{
+    font-family: 'Cairo', sans-serif;
+    font-weight: normal;
+    font-size: 20px ; 
+    line-height: 1.4em;
+}
+p3{
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    font-size: 20px ; 
+    line-height: 1.4em;
+}
+
+img {
+  width: 30%;
+  height: 50%; 
+}
+
+
+
+div.media-container{
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+}
+
+div.media{
+    align-self: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    position: relative;
+    vertical-align: auto;
+}
+
+
+.logo{
+    background-image:url(Images/petopia.png) ;
+    margin-left: 100%;    
+    margin-right: 100%;
+}
+.logo:hover{
+    background-image:url(Images/petopia_hover.png) ;
+    margin-left: 100%;    
+    margin-right: 100%;
+}
+
+
+
+div.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #d9d9d9;
+    border-bottom: solid 1px rgb(93, 93, 93);
+    box-sizing: border-box;
+    display: flex;
+    z-index: 3;
+}
+
+
+div.post {
+    margin: 20px auto 0;
+    margin-top: 20px; 
+    background-color: white;
+    width: 300px; 
+    height: 300px; /* Adjust the height to match the desired square size */
+    padding: 20px; 
+    border-radius: 5px; 
+    display: flex; 
+    flex-wrap:wrap;
+    margin-right: 10px;
+}
+
+
+
+
+div.navigation{
+    font-size: 1rem;
+    display: inline-block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+
+button.send{
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    width: 15rem;
+    height: 2rem;
+    font-size: 0.875rem;
+    border: 1px solid #d9d9d9;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    padding: 0;
+}
+
+button.send:hover{
+    background-color: white;
+    color: black;
+    outline: 1px solid black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button.nav{
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    float: left;
+    border: 1px solid #d9d9d9;
+    background-color: #d9d9d9;
+    padding: 0.5rem;
+}
+
+button.nav:hover{
+    background-color: rgba(149, 149, 149, 0.5);
+}
+
+
+
+div.container {
+  margin: 0 auto; 
+  margin-top: 50px; 
+  background-color: #dba159;
+  width: 90%; 
+  padding: 20px; 
+  border-radius: 5px; 
+  display: flex; 
+  
+}
+
+div.container > div { 
+  position: relative; /* Add position relative */
+  z-index: 1;
+}
+
+
+
+div.message {
+    font-family: 'Cairo', sans-serif; 
+    font-weight: bold; 
+    font-size: 1rem; 
+    margin: 80px auto; 
+    background-color: #efd780;
+    width: 75%; 
+    padding: 20px;
+    border-radius: 5px;
+    display: grid;
+  }
+
+textarea{
+    width: 98%;
+    height: 8rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+    resize: vertical;
+    font-family: 'Cairo', sans-serif;
+    font-weight: normal;
+    font-size: 0.575rem;
+}
