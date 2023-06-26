@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Tsukimi+Rounded:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;600&display=swap');
 
 div.navbar{
     position: fixed;
@@ -18,7 +18,7 @@ div.navigation{
     margin-right: auto;
 }
 button.nav{
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Arimo', sans-serif;
     font-size: 1rem;
     float: left;
     border: 1px solid #efd780;
@@ -31,7 +31,7 @@ button.nav:hover{
 
 
 body{
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Arimo', sans-serif;
     padding: 0;
     margin: 0;
     height: 100vh;

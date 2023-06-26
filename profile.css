@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Tsukimi+Rounded:wght@700&display=swap');
+
+div.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #efd780;
+    border-bottom: solid 1px rgb(93, 93, 93);
+    box-sizing: border-box;
+    display: flex;
+    z-index: 3;
+}
+div.navigation{
+    font-size: 1rem;
+    display: inline-block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+button.nav{
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    float: left;
+    border: 1px solid #efd780;
+    background-color: #efd780;
+    padding: 0.5rem;
+}
+button.nav:hover{
+    background-color: #ad9c5d;
+}
