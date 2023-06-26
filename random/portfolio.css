@@ -50,11 +50,36 @@ img.dogs {
 }
 
 img.logo {
-  display: inline-flex;
-  width: 50%;
-  top: 0;
-  background-color: #d9d9d9;
-  padding: 0.5rem;
+    width: 50%;
+    top: 0;
+    background-color: #d9d9d9;
+    text-align: center;
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+
+div.logo-container{
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding: 0.5rem;
+}
+
+div.post-header{
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    border-style: solid;
+    border-width: 3px;
+    width: 90%;
+    background-color: #FFFDD0;
+    margin: auto;
+    padding: 20px;
+    display: block;
+
 }
 
 button.caption{
@@ -71,14 +96,6 @@ button.caption{
 
 }
 
-div.logo-container{
-    width: fit-content;
-    height: fit-content;
-    display: grid;
-    place-items: center;
-    margin: 0 auto;
-}
-
 div.logo:hover{
     background-image:url(Images/petopia_hover.png) ;
 }
@@ -91,14 +108,13 @@ div.navbar{
     background-color: #d9d9d9;
     border-bottom: solid 1px rgb(93, 93, 93);
     box-sizing: border-box;
-    display: flex;
-    z-index: 3;
+    display: inline-flex;
+    flex-wrap: nowrap;
 }
 
 
 div.post {
-    margin: 20px auto 0;
-    margin-top: 20px; 
+    margin: 10px;
     background-color: white;
     width: 300px; 
     height: 300px; /* Adjust the height to match the desired square size */
@@ -106,12 +122,11 @@ div.post {
     border-radius: 5px; 
     display: flex; 
     flex-wrap:wrap;
-    margin-right: 10px;
 }
 
 div.navigation{
     font-size: 1rem;
-    display: inline-block;
+    display: inline-flex;
     margin-left: auto; 
     margin-right: auto;
     text-align: center;
@@ -145,7 +160,6 @@ a{
 button.nav{
     font-family: 'Cairo', sans-serif;
     font-size: 1rem;
-    float: left;
     border: 1px solid #d9d9d9;
     background-color: #d9d9d9;
     padding: 0.5rem;
