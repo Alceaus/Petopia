@@ -79,6 +79,7 @@ div.post-header{
     margin: auto;
     padding: 20px;
     display: block;
+    
 
 }
 
@@ -110,6 +111,7 @@ div.navbar{
     box-sizing: border-box;
     display: inline-flex;
     flex-wrap: nowrap;
+    z-index: 3;
 }
 
 
@@ -133,24 +135,7 @@ div.navigation{
 }
 
 
-button.send{
-    font-family: 'Cairo', sans-serif;
-    font-weight: bold;
-    width: 15rem;
-    height: 2rem;
-    font-size: 0.875rem;
-    border: 1px solid #d9d9d9;
-    background-color: black;
-    color: white;
-    margin: 0 auto;
-    padding: 0;
-}
 
-button.send:hover{
-    background-color: white;
-    color: black;
-    outline: 1px solid black;
-}
 
 a{
     text-decoration: none;
@@ -170,20 +155,20 @@ button.nav:hover{
 }
 
 div.container {
-  margin: 0 auto; 
-  margin-top: 10px; 
+  margin: 20px auto -10px; 
   background-color: #dba159;
-  width: 80%; 
+  width: 80%;
+  height: max-content; 
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
 }
   
-}
+
 
 div.container > div { 
   position: relative; /* Add position relative */
-  z-index: 1;
+  
 }
 
 
