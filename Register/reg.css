@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
+
+:root{
+    font-family: "Arimo",sans-serif;
+    font: weight 500;
+}
+
+.logodiv{
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/Bokeh-Field-Mt-Falcon.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.regdiv{
+    margin: auto;
+    background-color: rgba(219, 161, 89, 0.81);
+    height: fit-content;
+    width: 40%;
+    padding: 2.3rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    color: black;
+    font: weight 500px;
+}
+
+.regdiv p{
+    text-align: center;
+}
+
+.regnow{
+    max-width: 100%; 
+    text-align: center; 
+    font-weight: bold;
+}
+
+.register{
+    text-align: center;
+    font-size: 0.875rem;
+    color:white;
+    margin: auto;
+    width: 15rem;
+    height: 2rem;
+    background-color: black;
+    text-decoration: none;
+    padding-top: .8rem;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid black;
+    color: black;
+    max-width: 100%;
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.3rem;
+  }
+
+::placeholder { 
+    color: whitesmoke;
+    opacity: 0.8; 
+  }
