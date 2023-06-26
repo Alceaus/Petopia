@@ -50,22 +50,12 @@ img {
 
 
 
-div.media-container{
+div.logo-container{
     width: fit-content;
     height: fit-content;
     display: grid;
     place-items: center;
     margin: 0 auto;
-}
-
-div.media{
-    align-self: center;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    position: relative;
-    vertical-align: auto;
 }
 
 
