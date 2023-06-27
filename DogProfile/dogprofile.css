@@ -29,6 +29,16 @@ button.nav{
 button.nav:hover{
     background-color: #D0E3CC;
 }
+
+a {
+    text-decoration: none;
+    color:black;
+}
+
+a:visited{
+    color:black;
+}
+
 img.logo {
     width: 5%;
     top: 1;
