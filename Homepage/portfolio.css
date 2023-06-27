@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap');
 
 
 :root {
     color: black;
-    font-family: "Arimo",sans-serif;
+    font-family: "Poppins",sans-serif;
     font-size: 1.4rem;
     line-height: 18px;
 }
 
 
 body {
-    font-family: "Arimo",sans-serif;
+    font-family: "Poppins",sans-serif;
     padding-top: 100px;
     margin: 3;
     background-color: #FCFDAF;
@@ -50,14 +50,15 @@ div.logo-container{
 
 div.post-header{
     text-align: center;
-    font-family: 'Cairo', sans-serif;
+    font-family: "Poppins",sans-serif;
     font-weight: normal;
     font-size: 40px;
     border-style: solid;
     border-width: 3px;
     border-color: #FFFDD0;
-    width: 90%;
+    width: 50%;
     background-color: #FFFDD0;
+    opacity: 0.6;
     margin: auto;
     padding: 20px;
     display: block;
@@ -67,7 +68,7 @@ div.post-header{
 
 button.caption{
     text-align: center;
-    font-family: 'Cairo', sans-serif;
+    font-family: "Poppins",sans-serif;
     font-weight: normal;
     font-size: 15px;
     border-style: solid;
@@ -79,10 +80,10 @@ button.caption{
     padding: 10px;
 
 }
-
-div.logo:hover{
-    background-image:url(Images/petopia_hover.png) ;
+button.caption:hover{
+    background-color: #DBA159;
 }
+
 
 div.navbar{
     position: fixed;
@@ -126,8 +127,9 @@ a{
 }
 
 button.nav{
-    font-family: 'Cairo', sans-serif;
-    font-size: 1rem;
+    font-family: "Poppins",sans-serif;
+    font-weight: normal;
+    font-size: 15px;
     border: 1px solid #F7FFDD;
     background-color: #F7FFDD;
     padding: 0.5rem;
