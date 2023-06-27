@@ -45,14 +45,18 @@ body{
     font-weight: bold;
 }
 
+.regnow h1{
+    color: #D0E3CC;
+}
+
 .register{
     text-align: center;
     font-size: 0.875rem;
-    color:white;
+    color: black;
     margin: auto;
     width: 15rem;
     height: 2rem;
-    background-color: black;
+    background-color: #D0E3CC;
     text-decoration: none;
     padding-top: .8rem;
     font-size: 1rem;
@@ -63,7 +67,7 @@ input {
     border: 0;
     outline: 0;
     background: transparent;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #F7FFDD;
     color: black;
     max-width: 100%;
     font-size: 1rem;
