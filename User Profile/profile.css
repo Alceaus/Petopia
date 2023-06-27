@@ -25,6 +25,7 @@ button.nav{
     border: 1px solid #F7FFDD;
     background-color: #F7FFDD;
     padding: 0.5rem;
+    text-decoration: none;
 }
 button.nav:hover{
     background-color: #D0E3CC;
