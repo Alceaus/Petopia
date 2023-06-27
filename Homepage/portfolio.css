@@ -105,9 +105,10 @@ div.post {
     width: 300px; 
     height: 300px; /* Adjust the height to match the desired square size */
     padding: 20px; 
+    margin-right: 37px;
     border-radius: 5px; 
     display: flex; 
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
 div.navigation{
