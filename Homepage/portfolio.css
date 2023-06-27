@@ -3,14 +3,14 @@
 
 :root {
     color: black;
-    font-family: "Amiro",sans-serif;
+    font-family: "Arimo",sans-serif;
     font-size: 1.4rem;
     line-height: 18px;
 }
 
 
 body {
-    font-family: "Amiro",sans-serif;
+    font-family: "Arimo",sans-serif;
     padding-top: 100px;
     margin: 3;
     background-color: #FCFDAF;
@@ -50,7 +50,7 @@ div.logo-container{
 
 div.post-header{
     text-align: center;
-    font-family: "Amiro",sans-serif;
+    font-family: "Arimo",sans-serif;
     font-weight: normal;
     font-size: 40px;
     border-style: solid;
@@ -68,7 +68,7 @@ div.post-header{
 
 button.caption{
     text-align: center;
-    font-family: "Amiro",sans-serif;
+    font-family: "Arimo",sans-serif;
     font-weight: normal;
     font-size: 15px;
     border-style: solid;
@@ -129,7 +129,7 @@ a:visited{
 }
 
 button.nav{
-    font-family: "Amiro",sans-serif;
+    font-family: "Arimo",sans-serif;
     font-weight: normal;
     font-size: 15px;
     border: 1px solid #F7FFDD;
