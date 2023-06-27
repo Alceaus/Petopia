@@ -27,6 +27,15 @@ button.nav{
     padding: 0.5rem;
     text-decoration: none;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:visited{
+    color:black;
+}
+
 button.nav:hover{
     background-color: #D0E3CC;
 }

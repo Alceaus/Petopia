@@ -19,6 +19,14 @@ div.navigation{
     margin-right: auto;
     text-align: center;
 }
+a {
+    text-decoration: none;
+}
+
+a:visited{
+    color:black;
+}
+
 button.nav{
     font-family: 'Cairo', sans-serif;
     font-size: 1rem;
