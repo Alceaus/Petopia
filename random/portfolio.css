@@ -50,14 +50,16 @@ img.dogs {
 }
 
 img.logo {
-    width: 50%;
-    top: 0;
-    background-color: #d9d9d9;
+    width: 5%;
+    top: 1;
+    background-color: #F7FFDD;
     text-align: center;
     display: block;
     width: 70%;
     margin: auto;
+    z-index: 3;
 }
+
 
 div.logo-container{
     width: fit-content;
@@ -106,8 +108,8 @@ div.navbar{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #d9d9d9;
-    border-bottom: solid 1px rgb(93, 93, 93);
+    background-color: #F7FFDD;
+    border-bottom: solid 1px #D0E3CC;
     box-sizing: border-box;
     display: inline-flex;
     flex-wrap: nowrap;
@@ -145,13 +147,13 @@ a{
 button.nav{
     font-family: 'Cairo', sans-serif;
     font-size: 1rem;
-    border: 1px solid #d9d9d9;
-    background-color: #d9d9d9;
+    border: 1px solid #F7FFDD;
+    background-color: #F7FFDD;
     padding: 0.5rem;
 }
 
 button.nav:hover{
-    background-color: rgba(149, 149, 149, 0.5);
+    background-color: #D0E3CC;
 }
 
 div.container {
