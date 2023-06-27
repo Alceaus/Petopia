@@ -82,6 +82,7 @@ div.post-header{
     font-size: 40px;
     border-style: solid;
     border-width: 3px;
+    border-color: #FFFDD0;
     width: 90%;
     background-color: #FFFDD0;
     margin: auto;
@@ -98,6 +99,7 @@ button.caption{
     font-size: 15px;
     border-style: solid;
     border-width: 3px;
+    border-color: #FFFDD0;
     height: auto;
     width: 100%;
     background-color: #FFFDD0;
