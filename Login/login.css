@@ -5,30 +5,47 @@ div.navbar{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #efd780;
-    border-bottom: solid 1px rgb(93, 93, 93);
+    background-color: #F7FFDD;
+    border-bottom: solid 1px #D0E3CC;
     box-sizing: border-box;
-    display: flex;
+    display: inline-flex;
+    flex-wrap: nowrap;
     z-index: 3;
 }
 div.navigation{
     font-size: 1rem;
-    display: inline-block;
+    display: inline-flex;
     margin-left: auto; 
     margin-right: auto;
+    text-align: center;
 }
 button.nav{
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Cairo', sans-serif;
     font-size: 1rem;
-    float: left;
-    border: 1px solid #efd780;
-    background-color: #efd780;
+    border: 1px solid #F7FFDD;
+    background-color: #F7FFDD;
     padding: 0.5rem;
 }
 button.nav:hover{
-    background-color: #ad9c5d;
+    background-color: #D0E3CC;
 }
-
+img.logo {
+    width: 5%;
+    top: 1;
+    background-color: #F7FFDD;
+    text-align: center;
+    display: block;
+    width: 70%;
+    margin: auto;
+    z-index: 3;
+}
+div.logo-container{
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding: 0.5rem;
+}
 
 body{
     font-family: 'Arimo', sans-serif;
@@ -36,7 +53,11 @@ body{
     margin: 0;
     height: 100vh;
     overflow: hidden;
-    background-color: #f7ffdd;
+    background-color: #fcfdaf;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/Bokeh-Field-Mt-Falcon.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 .center{
@@ -47,6 +68,7 @@ body{
     width: 400px;
     background: #dba159;
     border-radius: 10px;
+    opacity: 80%;
 }
 .center h1{
     text-align: center;
@@ -75,7 +97,7 @@ form .txt_field{
     position: absolute;
     top: 50%;
     left: 5px;
-    color: black;
+    color: F7FFDD;
     transform: translateY(-50%);
     font-size: 16px;
     pointer-events: none;

@@ -5,32 +5,50 @@ div.navbar{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #efd780;
-    border-bottom: solid 1px rgb(93, 93, 93);
+    background-color: #F7FFDD;
+    border-bottom: solid 1px #D0E3CC;
     box-sizing: border-box;
-    display: flex;
+    display: inline-flex;
+    flex-wrap: nowrap;
     z-index: 3;
 }
 div.navigation{
     font-size: 1rem;
-    display: inline-block;
+    display: inline-flex;
     margin-left: auto; 
     margin-right: auto;
+    text-align: center;
 }
 button.nav{
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Cairo', sans-serif;
     font-size: 1rem;
-    float: left;
-    border: 1px solid #efd780;
-    background-color: #efd780;
+    border: 1px solid #F7FFDD;
+    background-color: #F7FFDD;
     padding: 0.5rem;
 }
 button.nav:hover{
-    background-color: #ad9c5d;
+    background-color: #D0E3CC;
+}
+img.logo {
+    width: 5%;
+    top: 1;
+    background-color: #F7FFDD;
+    text-align: center;
+    display: block;
+    width: 70%;
+    margin: auto;
+    z-index: 3;
+}
+div.logo-container{
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding: 0.5rem;
 }
 
 body{
-    background: #f7ffdd;
+    background: #fcfdaf;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -78,11 +96,13 @@ body{
     padding: 30px 25px;
 }
 
-.wrapper .right .info{
+.wrapper .right .info,
+.wrapper .right .interests{
     margin-bottom: 25px;
 }
 
-.wrapper .right .info h3{
+.wrapper .right .info h3,
+.wrapper .right .interests h3{
     margin-bottom: 15px;
     padding-bottom: 5px;
     border-bottom: 1px solid #e0e0e0;
@@ -91,21 +111,25 @@ body{
     letter-spacing: 5px;
 }
 
-.wrapper .right .info_data{
+.wrapper .right .info_data,
+.wrapper .right .interests_data{
     display: flex;
     justify-content: space-between;
 }
 
-.wrapper .right .info_data .data{
+.wrapper .right .info_data .data,
+.wrapper .right .interests_data .data{
     width: 45%;
 }
 
-.wrapper .right .info_data .data h4{
+.wrapper .right .info_data .data h4,
+.wrapper .right .interests_data .data h4{
     color: #353c4e;
     margin-bottom: 5px;
 }
 
-.wrapper .right .info_data p{
+.wrapper .right .info_data p,
+.wrapper .right .interests_data .data p{
     font-size: 13px;
     margin-bottom: 10px;
     margin-right: 100px;
