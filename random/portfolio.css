@@ -9,10 +9,18 @@
 }
 
 
-body{
+body {
     font-family: 'Cairo', sans-serif;
     padding-top: 50px;
+    margin: 2;
+    background-color: #FDFF91;
+    background-size: 30px;
+    background-image: url('Images/dog.png'),url('Images/cat.png');
+    background-repeat: repeat, repeat;
+    background-position:  200px  center,left center;
+    height:250px;
 }
+
 h1 {
     font-weight: bold; 
     font-size: 1.75rem; 
