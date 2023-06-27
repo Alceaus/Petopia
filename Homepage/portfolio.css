@@ -79,6 +79,9 @@ button.caption{
     padding: 10px;
 
 }
+button.caption:hover{
+    background-color: #DBA159;
+}
 
 div.logo:hover{
     background-image:url(Images/petopia_hover.png) ;
