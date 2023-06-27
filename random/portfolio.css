@@ -11,8 +11,8 @@
 
 body {
     font-family: 'Cairo', sans-serif;
-    padding-top: 50px;
-    margin: 2;
+    padding-top: 100px;
+    margin: 3;
     background-color: #FCFDAF;
     background-size: 30px;
     background-image: url('Images/dog.png');
