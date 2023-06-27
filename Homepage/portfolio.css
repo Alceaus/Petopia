@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Tsukimi+Rounded:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600&display=swap');
 
 
 :root {
     color: black;
-    font-family: 'Tsukimi Rounded', sans-serif;
+    font-family: "Arimo",sans-serif;
     font-size: 1.4rem;
     line-height: 18px;
 }
 
 
 body {
-    font-family: 'Cairo', sans-serif;
+    font-family: "Arimo",sans-serif;
     padding-top: 100px;
     margin: 3;
     background-color: #FCFDAF;
@@ -19,40 +19,13 @@ body {
 
 }
 
-h1 {
-    font-weight: bold; 
-    font-size: 1.75rem; 
-}
 
-h2 {
-    font-weight: light;
-    font-size: 1.25rem; 
-    line-height: 1.4em;
-}
-
-p1 {
-    font-family: 'Cairo', sans-serif;
-    font-weight: lighter;
-    font-size: 20px ; 
-    line-height: 1.4em;
-}
-p2{
-    font-family: 'Cairo', sans-serif;
-    font-weight: normal;
-    font-size: 20px ; 
-    line-height: 1.4em;
-}
-p3{
-    font-family: 'Cairo', sans-serif;
-    font-weight: bold;
-    font-size: 20px ; 
-    line-height: 1.4em;
-}
 
 img.dogs {
   width: 100%;
   height: 75%;
   text-align: top; 
+  
 }
 
 img.logo {
