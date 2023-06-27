@@ -50,14 +50,15 @@ div.logo-container{
 
 div.post-header{
     text-align: center;
-    font-family: 'Cairo', sans-serif;
+    font-family: "Poppins",sans-serif;
     font-weight: normal;
     font-size: 40px;
     border-style: solid;
     border-width: 3px;
     border-color: #FFFDD0;
-    width: 90%;
+    width: 50%;
     background-color: #FFFDD0;
+    opacity: 0.6;
     margin: auto;
     padding: 20px;
     display: block;
@@ -67,7 +68,7 @@ div.post-header{
 
 button.caption{
     text-align: center;
-    font-family: 'Cairo', sans-serif;
+    font-family: "Poppins",sans-serif;
     font-weight: normal;
     font-size: 15px;
     border-style: solid;
@@ -83,9 +84,6 @@ button.caption:hover{
     background-color: #DBA159;
 }
 
-div.logo:hover{
-    background-image:url(Images/petopia_hover.png) ;
-}
 
 div.navbar{
     position: fixed;
@@ -129,8 +127,9 @@ a{
 }
 
 button.nav{
-    font-family: 'Cairo', sans-serif;
-    font-size: 1rem;
+    font-family: "Poppins",sans-serif;
+    font-weight: normal;
+    font-size: 15px;
     border: 1px solid #F7FFDD;
     background-color: #F7FFDD;
     padding: 0.5rem;
