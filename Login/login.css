@@ -19,8 +19,18 @@ div.navigation{
     margin-right: auto;
     text-align: center;
 }
+a{
+    color: black;
+    text-decoration: none;
+    color:black;
+}
+
+a:visited{
+    color:black;
+}
+
 button.nav{
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Arimo', sans-serif;
     font-size: 1rem;
     border: 1px solid #F7FFDD;
     background-color: #F7FFDD;
