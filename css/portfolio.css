@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;600&display=swap');
+
+
+:root {
+    color: black;
+    font-family: "Arimo",sans-serif;
+    font-size: 1.4rem;
+    line-height: 18px;
+}
+
+
+body {
+    font-family: "Arimo",sans-serif;
+    padding-top: 100px;
+    margin: 3;
+    background-color: #FCFDAF;
+    background-size: 30px;
+    background-image: url('Images/dog.png');
+
+}
+
+
+
+img.dogs {
+  width: 100%;
+  height: 75%;
+  text-align: top; 
+  
+}
+
+img.logo {
+    width: 5%;
+    top: 1;
+    background-color: #F7FFDD;
+    text-align: center;
+    display: block;
+    width: 70%;
+    margin: auto;
+    z-index: 3;
+}
+
+
+div.logo-container{
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding: 0.5rem;
+}
+
+div.post-header{
+    text-align: center;
+    font-family: "Arimo",sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #FFFDD0;
+    width: 50%;
+    background-color: #FFFDD0;
+    opacity: 0.6;
+    margin: auto;
+    padding: 20px;
+    display: block;
+    
+
+}
+
+button.caption{
+    text-align: center;
+    font-family: "Arimo",sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #FFFDD0;
+    height: auto;
+    width: 100%;
+    background-color: #FFFDD0;
+    padding: 10px;
+
+}
+button.caption:hover{
+    background-color: #DBA159;
+}
+
+
+div.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F7FFDD;
+    border-bottom: solid 1px #D0E3CC;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    z-index: 3;
+}
+
+
+div.post {
+    margin: 10px;
+    background-color: white;
+    width: 300px; 
+    height: 300px; /* Adjust the height to match the desired square size */
+    padding: 15px; 
+    margin-right: 37px;
+    border-radius: 5px; 
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+div.navigation{
+    font-size: 1rem;
+    display: inline-flex;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+button.nav{
+    font-family: "Arimo",sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    border: 1px solid #F7FFDD;
+    background-color: #F7FFDD;
+    padding: 0.5rem;
+}
+
+button.nav:hover{
+    background-color: #D0E3CC;
+}
+
+div.container {
+  margin: 20px auto -10px; 
+  background-color: #dba159;
+  width: 80%;
+  height: max-content; 
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+  
+
+
+div.container > div { 
+  position: relative; /* Add position relative */
+  
+}
+
+
+

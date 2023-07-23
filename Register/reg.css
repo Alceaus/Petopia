@@ -49,7 +49,7 @@ body{
     color: #D0E3CC;
 }
 
-.register{
+input[type="submit"]{
     text-align: center;
     font-size: 0.875rem;
     color: black;
