@@ -52,6 +52,8 @@ body{
 .publish{
     text-align: center;
     font-size: 0.875rem;
+    border: none;
+    padding-bottom: 2rem;
     color: black;
     margin: auto;
     width: 15rem;
@@ -61,6 +63,11 @@ body{
     padding-top: .8rem;
     font-size: 1rem;
     border-radius: 10px;
+}
+
+.warning{
+    font-weight: bold;
+    color:black;
 }
 
 input {
@@ -74,6 +81,10 @@ input {
     padding-top: 1rem;
     padding-bottom: 0.3rem;
   }
+
+input.error{
+    border-bottom: 2px solid black;
+}
 
 ::placeholder { 
     color: whitesmoke;
