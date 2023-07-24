@@ -12,6 +12,8 @@ app.set("view engine", "hbs");
 app.set("views", templatePath);
 app.use(express.urlencoded({ extended: false }));
 
+//navigation bar
+
 app.get("/", (req, res) => {
     res.render("home");
 });
@@ -67,6 +69,7 @@ app.post('/login', async (req, res) => {
         res.send("Wrong details");
     }
 });
+
 
 
 app.listen(3000, () => {
