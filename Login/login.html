@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login | Petopia</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="login.css">
+        <link rel="icon" type="image/png" href="Images/paw.png">
+        <script defer src="../Login/login.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="navigation">
+                <button class="nav"><a href="../CreatePost/createpost.html">Create New Post</a></button>
+                <div class="logo-container"> 
+                    <a href="../Homepage/index.html">
+                    <img src="Images/petopia.png" alt="Logo" class="logo">
+                    </a>
+                </div>
+                <button class="nav"><a href="../User Profile/userprofile.html">Account</a></button>
+            </div>
+        </div>
+        <div class="center">
+            <h1>Login</h1>
+            <form id="form" action="../Homepage/index.html"  method="GET">
+                <div id="ucont" class="txt_field">
+                    <input id="uname" type="text">
+                    <label>Username</label>
+                </div>
+                <div id="pcont"class="txt_field">
+                    <input id="pass"type="password">
+                    <label>Password</label>
+                </div>
+                <div class="pass">Forgot Password?</div>
+                <input type="submit" value="Login">
+                <p class="errorm" id="error">  </p>
+                <div class="signup_link">
+                    Not a member? <a href="../Register/register.html">Signup</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
