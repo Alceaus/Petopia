@@ -39,6 +39,16 @@ const data={
 }
 
 await collection.insertMany([data])
+const checking = await LogInCollection.findOne({ username:req.body.username})
+
+try{
+    if (checking.username== req.body.username && checking.email == req.body.email && checking.password== req.body.password){
+        res.send("User already exist");
+    }
+    else {
+        await LogInCollection. insertMany ([data]);
+    }
+}
 
 res.render("login")
 
