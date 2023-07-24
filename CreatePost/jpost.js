@@ -49,11 +49,12 @@ form.addEventListener('submit',(e)=> {
         dlikes.classList.remove('error');
     }
 
-    if (errors!=0){
+    if (errors != false){
         e.preventDefault();
         error.innerHTML = "Fill out the missing fields";
     }
     else{
+        errors = false;
         error.innerHTML=" ";
     }
     
