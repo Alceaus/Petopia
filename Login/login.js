@@ -1,6 +1,39 @@
-const loginForm = document.getElementById("login-form");
-const loginButton = document.getElementById("login-form-submit");
-const loginErrorMsg = document.getElementById("login-error-msg");
+const uname = document.getElementById('uname')
+const pass = document.getElementById('pass')
+const errorm = document.getElementById('error')
+
+const ucont = document.getElementById('ucont')
+const pcont = document.getElementById('pcont')
+
+form.addEventListener("submit", (e) => {
+    var errors = false;
+    if(uname.value == null || uname.value === ''){
+        ucont.classList.add('error');
+        errors = true;
+    }else{
+        ucont.classList.remove('error');
+    }
+    
+
+    if(pass.value == null || pass.value === ''){
+        pcont.classList.add('error');
+        errors = true;
+    }else{
+        pcont.classList.remove('error');
+    }
+
+    if (errors != false){
+        e.preventDefault();
+        errorm.innerHTML = "Fill out the missing fields";
+    }
+    else{
+        errors = false;
+        errorm.innerHTML=" ";
+    }
+})
+
+/*
+OLD CODE
 
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -14,3 +47,4 @@ loginButton.addEventListener("click", (e) => {
         loginErrorMsg.style.opacity = 1;
     }
 })
+*/

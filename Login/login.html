@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="login.css">
         <link rel="icon" type="image/png" href="Images/paw.png">
+        <script defer src="../Login/login.js"></script>
     </head>
     <body>
         <div class="navbar">
@@ -20,17 +21,18 @@
         </div>
         <div class="center">
             <h1>Login</h1>
-            <form method="post">
-                <div class="txt_field">
-                    <input type="text" required>
+            <form id="form" action="../Homepage/index.html"  method="GET">
+                <div id="ucont" class="txt_field">
+                    <input id="uname" type="text">
                     <label>Username</label>
                 </div>
-                <div class="txt_field">
-                    <input type="password" required>
+                <div id="pcont"class="txt_field">
+                    <input id="pass"type="password">
                     <label>Password</label>
                 </div>
                 <div class="pass">Forgot Password?</div>
                 <input type="submit" value="Login">
+                <p class="errorm" id="error">  </p>
                 <div class="signup_link">
                     Not a member? <a href="../Register/register.html">Signup</a>
                 </div>
