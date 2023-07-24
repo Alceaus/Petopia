@@ -39,7 +39,7 @@ const data={
 }
 
 await collection.insertMany([data])
-const checking = await LogInCollection.findOne({ username:req.body.username})
+const checking = await CollfindOne({ username:req.body.username})
 
 try{
     if (checking.username== req.body.username && checking.email == req.body.email && checking.password== req.body.password){
@@ -49,11 +49,39 @@ try{
         await LogInCollection. insertMany ([data]);
     }
 }
+catch{
+    res.send ("Wrong inputs")
+}
 
-res.render("login")
+    res.status(201).render("home", {
+        naming: req.body.username
+    })
 
 })
 
+app.post('/login', async (req, res) => {
+
+    try {
+        const check = await LogInCollection.findOne({ name: req.body.name })
+
+        if (check.password === req.body.password) {
+            res.status(201).render("home", { naming: `${req.body.password}+${req.body.name}` })
+        }
+
+        else {
+            res.send("incorrect password")
+        }
+
+
+    } 
+    
+    catch (e) {
+
+        res.send("wrong details")   
+
+    }
+
+})
 app.listen(3000, ()=>{
     console.log("port connected");
 })
