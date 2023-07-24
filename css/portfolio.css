@@ -41,8 +41,8 @@ img.logo {
 
 
 div.logo-container{
-    width: fit-content;
-    height: fit-content;
+    width: auto;
+    height: auto;
     display: inline-flex;
     flex-wrap: nowrap;
     padding: 0.5rem;
