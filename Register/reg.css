@@ -49,9 +49,11 @@ body{
     color: #D0E3CC;
 }
 
-input[type="submit"]{
+.register{
     text-align: center;
     font-size: 0.875rem;
+    border: none;
+    padding-bottom: 2rem;
     color: black;
     margin: auto;
     width: 15rem;
@@ -79,3 +81,12 @@ input {
     color: whitesmoke;
     opacity: 0.8; 
   }
+
+.error{
+    border-bottom: 2px solid black;
+}
+
+.warning{
+    font-weight: bold;
+    color:black;
+}

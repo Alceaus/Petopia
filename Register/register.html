@@ -3,30 +3,36 @@
         <title> Register | Petopia </title>
         <link rel="stylesheet" type="text/css" media="all" href= "reg.css">
         <link rel="icon" type="image/png" href="Images/paw.png">
+        <script defer src="../Register/jregister.js"></script>
     </head>
     
     <body>
         <div class="logodiv">
-            <img src="Images/logo.png">
+            <a href="../Homepage/index.html">
+                <img src="Images/logo.png">
+            </a>
         </div>
       
 
         <div style="height:50px"></div>
-
+        
+        <form id="form" action="../Homepage/index.html" method="GET">
         <div class="regdiv">
             <div class="regnow">
                     <h1 style="height: 50px;">Register Now</h1>
             </div>
-            <input type="text" placeholder="Enter Email">
+            <input id="email" type="text" placeholder="Enter Email">
             <br>
-            <input type="text" placeholder="Enter Username">
+            <input id="uname" type="text" placeholder="Enter Username">
             <br>
-            <input type="password" placeholder="Enter Password">
+            <input id="pass" type="password" placeholder="Enter Password">
             <br>
-            <input type="password" placeholder="Repeat Password">
-            <br><br>
-            <a href="../Homepage/index.html" button class="register" >Register</a>
+            <input id="rpass"type="password" placeholder="Repeat Password">
+            <br>
+            <p class="warning" id="error"></p>
+            <button class="register" type="submit">Register</button>
             <p>Already have an account? <a href="../Login/login.html">Log in</a></p>
         </div>
+        </form>
     </body>
 </html>
