@@ -19,9 +19,31 @@ const LoginSchema=new mongoose.Schema({
     }
 })
 
+const PetSchema=new mongoose.Schema({
+    petname:{
+        type:String,
+        required:true
+    },
+    furtype:{
+        type:String,
+        required:true
+    },
+    weight:{
+        type:Number,
+        required:true
+    },
+    likes:{
+        type:String,
+        required:true
+    },
+    dislikes:{
+        type:String,
+        required:true
+    }
+})
 
 
+const collection =new mongoose.model("users",LoginSchema)
+const collection1 =new mongoose.model("pets",PetSchema)
 
-const collection=new mongoose.model("users",LoginSchema)
-
-module.exports=collection
+module.exports=collection,collection1
