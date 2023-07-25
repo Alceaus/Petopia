@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> Create a New Post | Petopia </title>
+        <link rel="stylesheet" type="text/css" media="all" href= "../post.css">
+        <link rel="icon" type="image/png" href="Images/paw.png">
+        <script defer src="../CreatePost/jpost.js"></script>
+    </head>
+    
+    <body>
+        <div class="logodiv">
+            <a href="/home" ><img src="Images/logo.png"></a>
+        </div>
+      
+
+        <div style="height:50px"></div>
+
+        <form id="form" action="../Homepage/index.html" method="GET">
+        <div class="postdiv">
+            <div class="postnow">
+                    <h1 style="height: 50px;">Posting a pet up for adoption</h1>
+            </div>
+            
+            <input id ="name" type="text" placeholder="Enter Pet Name">
+            <br>
+            <input id="fur" type="text" placeholder="Enter Fur Type">
+            <br>
+            <input id="weight" type="text" placeholder="Enter Weight">
+            <br>
+            <input id="likes" type="text" placeholder="Enter Likes">
+            <br>
+            <input id="dislikes" type="text" placeholder="Enter Dislikes">
+            <br>
+            <p class="warning" id="error"></p>
+            <button type="submit" class="publish">Publish Post</button>
+        </form>
+        </div>
+    </body>
+</html>
