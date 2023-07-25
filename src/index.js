@@ -34,6 +34,14 @@ app.get("/createpost", (req, res) => {
     res.render("createpost");
 });
 
+app.get("/Abigail", (req, res) => {
+    res.render("Abigail");
+});
+
+app.get("/userprofile", (req, res) => {
+    res.render("userprofile");
+});
+
 app.post("/register", async (req, res) => {
     const data = {
         email: req.body.email,
