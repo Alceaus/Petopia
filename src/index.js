@@ -2,12 +2,9 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const hbs = require("hbs");
-
 const collection = require("./mongodb"); // Import your MongoDB collection here
 
 const templatePath = path.join(__dirname, "../templates");
-const publicPath = path.join(__dirname, "../public");
-console.log(publicPath);
 
 app.use(express.json());
 app.use(express.static('public'));
@@ -50,36 +47,37 @@ app.post("/register", async (req, res) => {
         email: req.body.email,
         username: req.body.username,
         password: req.body.password
-    }
+    };
 
     // Use the `collection` object to insert the data into your MongoDB collection
-   
+    try {
         const checking = await collection.findOne({ username: req.body.username });
-        try {
-        if (checking.username === req.body.username && checking.password===req.body.password) {
+
+        if (checking) {
             res.send("User already exists");
         } else {
-            await collection.insertMany([data]);;
+            await collection.insertOne(data);
+            res.status(201).render("home", {
+                naming: req.body.username
+            });
         }
-    } catch {
+    } catch (error) {
         res.send("Wrong inputs");
     }
-    res.status(201).render("home", {
-        username: req.body.username
-    })
-})
+});
 
 app.post('/login', async (req, res) => {
     try {
-        const check = await collection.findOne({ username: req.body.username });
+        const check = await collection.findOne({ username: req.body.name });
 
         if (check && check.password === req.body.password) {
-            res.status(201).render("home", {naming: `${req.body.password}+${req.body.username}`
-            })
+            res.status(201).render("home", {
+                naming: `${req.body.password}+${req.body.name}`
+            });
         } else {
             res.send("Incorrect password or user does not exist");
         }
-    } catch (e) {
+    } catch (error) {
         res.send("Wrong details");
     }
 });
