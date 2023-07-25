@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
 
-mongoose.connect("mongodb://localhost:27017/Petopia") //mongo db connection to mongodb
+mongoose.connect("mongodb://127.0.0.1:27017/Petopia") //mongo db connection to mongodb
 .then(()=>{
     console.log("mongodb connected");
 })
@@ -18,6 +18,8 @@ const LoginSchema=new mongoose.Schema({
         required:true
     }
 })
+
+
 
 
 const collection=new mongoose.model("users",LoginSchema)
