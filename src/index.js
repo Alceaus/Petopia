@@ -30,6 +30,10 @@ app.get("/register", (req, res) => {
     res.render("register");
 });
 
+app.get("/createpost", (req, res) => {
+    res.render("createpost");
+});
+
 app.post("/register", async (req, res) => {
     const data = {
         email: req.body.email,
