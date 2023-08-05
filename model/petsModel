@@ -24,3 +24,5 @@ const info=new mongoose.Schema({
 })
 
 const petInfo = mongoose.model("pets", info);
+
+mongoose.exports = petInfo;

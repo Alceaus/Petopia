@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+const { Schema, SchemaTypes, model } = require('mongoose');
 
-var account =new mongoose.Schema({
+var account =new Schema({
     email:{
         type:String,
         required:true
@@ -15,4 +15,6 @@ var account =new mongoose.Schema({
     }
 })
 
-const userAccount = mongoose.model("users", account);
+const userAccount = model("users", account);
+
+module.exports = userAccount;
