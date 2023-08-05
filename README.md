@@ -13,3 +13,9 @@ nodemon, hbs, express, mongoose
 
 VSCode Extention: 
 mongodb
+
+NodeJS library used:
+mongoose 
+express 
+hbs 
+bcrypt 

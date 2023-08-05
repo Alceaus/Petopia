@@ -9,6 +9,10 @@ mongoose.connect("mongodb://127.0.0.1:27017/Petopia") //mongo db connection to m
 })
 
 const LoginSchema=new mongoose.Schema({
+    email:{
+        type:String,
+        required:true
+    },
     username:{
         type:String,
         required:true
@@ -46,4 +50,4 @@ const PetSchema=new mongoose.Schema({
 const collection =new mongoose.model("users",LoginSchema)
 const collection1 =new mongoose.model("pets",PetSchema)
 
-module.exports=collection,collection1
+module.exports=collection,collection1;

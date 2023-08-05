@@ -1,14 +1,17 @@
 const express = require("express");
 const app = express();
+
+
 const path = require("path");
 const hbs = require("hbs");
 const collection = require("./mongodb"); // Import your MongoDB collection here
+const urlencoder = express.urlencoded({extended: false,});
 
 const templatePath = path.join(__dirname, "../templates");
 
 app.use(express.json());
 app.use(express.static('public'));
-app.set("view engine", "hbs");
+app.set("view engine", hbs);
 app.set("views", templatePath);
 app.use(express.urlencoded({ extended: false }));
 
