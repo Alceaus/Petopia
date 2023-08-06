@@ -16,6 +16,9 @@ mongodb
 
 NodeJS library used:
 mongoose 
-express 
+express
+express-session
+body-parser
+multer
 hbs 
 bcrypt 

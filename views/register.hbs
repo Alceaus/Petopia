@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title> Register | Petopia </title>
+        <link rel="stylesheet" type="text/css" media="all" href= "../static/css/register.css">
+        <script src="static/JS/forms.js" defer> </script>
+        <link rel="icon" type="image/png" href="../static/Images/paw.png">
+    </head>
+    
+    <body>
+        <div class="logodiv">
+            <a href="/home">
+            <img src="../static/Images/petopia.png">
+            </a>
+        </div>
+      
+
+        <div style="height:50px"></div>
+        <form id="registerForm" name="registerForm" action="/register" method="post">
+            <div class="regdiv">
+                <div class="regnow">
+                        <h1 style="height: 50px;">Register Now</h1>
+                </div>
+                <input id="email" type="text" name="email" placeholder="Enter Email">
+                <br>
+                <input id="username" type="text" name="username" placeholder="Enter Username">
+                <br>
+                <input id="password" type="password" name="password" placeholder="Enter Password">
+                <br><br>
+                <input class="submitBtn" id="registerBtn" type="submit" value="Register">
+                <p class="error" id="r_error">  </p>
+                <p>Already have an account? <a href="/login">Log in</a></p>
+            </div>
+        </form>
+    </body>
+</html>
