@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+const { Schema, SchemaTypes, model } = require('mongoose');
 
-const info = new mongoose.Schema({
+var info = new Schema({
     petname: {
         type: String,
         required: true
@@ -27,6 +27,6 @@ const info = new mongoose.Schema({
     }
 });
 
-const petInfo = mongoose.model("pets", info);
+const petInfo = model("pets", info);
 
-mongoose.exports = petInfo;
+module.exports = petInfo;

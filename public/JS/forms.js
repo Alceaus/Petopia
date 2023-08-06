@@ -1,11 +1,12 @@
 // input fields and button
-const registerBtn = document.querySelector("registerBtn");
-const updateBtn = document.querySelector("updateBtn");
-const regEmailNoInput = document.querySelector("email");
-const regUsernameNoInput = document.querySelector("username");
-const logUsernameNoInput = document.querySelector("l_username");
-const logPasswordNoInput = document.querySelector("l_password");
-const uploadBtn= document. querySelector ("uploadBtn")
+const registerBtn = document.querySelector("#registerBtn");
+const loginBtn = document.querySelector("#loginBtn");
+const updateBtn = document.querySelector("#updateBtn");
+const regEmailNoInput = document.querySelector("#email");
+const regUsernameNoInput = document.querySelector("#username");
+const logUsernameNoInput = document.querySelector("#l_username");
+const logPasswordNoInput = document.querySelector("#l_password");
+const uploadBtn= document. querySelector ("#uploadBtn")
 // forms
 const regForm = document.forms.registerForm;
 const loginForm = document.forms.loginForm;
@@ -74,6 +75,8 @@ registerBtn?.addEventListener("click", async function (e) {
         - `#r_error` displays no error message
         - `#registerBtn` is enabled
 */
+
+/*
 regEmailNoInput?.addEventListener("keyup", async function (e) {
     console.log('register email input value changed');
 
@@ -117,6 +120,41 @@ regUsernameNoInput?.addEventListener("keyup", async function (e) {
         }
     } catch (error) {
         console.error('Error while checking username:', error);
+    }
+});
+*/
+
+loginBtn?.addEventListener("click", async function (e) {
+    e.preventDefault();
+    console.log('clicked login');
+
+    const formData = new FormData(loginForm);
+
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    try {
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+            // Login successful, redirect to home page or any other desired page
+            window.location.href = "/";
+        } else {
+            // Login failed, display error message
+            const errorData = await response.json();
+            const loginError = document.querySelector("#l_error");
+            loginError.textContent = errorData.err || 'Login failed.';
+        }
+    } catch (error) {
+        console.error('Error while logging in:', error);
     }
 });
 

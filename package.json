@@ -1,4 +1,13 @@
 {
+  "name": "current-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
@@ -9,6 +18,8 @@
     "mongoose": "^7.4.2",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^3.0.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
     "sudo": "^1.0.3"
   }
 }

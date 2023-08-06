@@ -1,26 +1,32 @@
 const express = require("express");
 const User = require("../model/usersModel");
-const router = express();
+const Pet = require("../model/petsModel");
+const router = express.Router();
+const bcrypt = require("bcrypt");
+
+const { checkAuthenticated, checkNotAuthenticated } = require('./auth');
 
 const urlencoder = express.urlencoded({extended: false,});
 
-router.get("/", function (req, res) {
+router.get("/", checkAuthenticated, function (req, res) {
     res.render("home");
-    console.log("index");
-    // console.log(req.session.name);
+});
+
+router.get("/home", checkAuthenticated, function (req, res) {
+    res.render("home");
 });
 
 router.get("/createpost", (req, res) => {
     res.render("createpost");
 });
 
-router.get("/login", function (req, res) {
+router.get("/login", checkNotAuthenticated, (req, res) => {
     res.render("login");
     console.log("login");
 });
 
 
-router.get("/register", function (req, res) {
+router.get("/register", checkNotAuthenticated, (req, res) => {
   res.render("register");
   console.log("register");
 });
@@ -31,7 +37,7 @@ router.get("/signout", urlencoder, (req, res) => {
     console.log("index signout");
 });
 
-router.get("/about", function (req, res) {
+router.get("/about",(req, res) => {
   
       res.render("about", {
         loggedin:req.session.loggedin,
@@ -56,64 +62,58 @@ router.get("/about", function (req, res) {
     }
 });
 
-router.get('/checkUsername', async function (req, res) {
-    const username = req.query.username;
-    try {
-        const user = await User.findOne({ username: username });
-        if (user) {
-            // Username exists in the database
-            res.json({ exists: true });
-        } else {
-            // Username does not exist in the database
-            res.json({ exists: false });
-        }
-    } catch (error) {
-        console.error('Error checking username:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-});
-
-router.post('/register', async function (req, res) {
+router.post('/register', checkNotAuthenticated, async (req, res) => {
     const { email, username, password } = req.body;
-    
+
     console.log('Received registration data:', { email, username, password });
+
+    var salt = bcrypt.genSaltSync(10);
+    var hash = bcrypt.hashSync(password, salt);
 
     try {
         const user = new User({
             email,
             username,
-            password,
+            password: hash,
         });
 
         await user.save();
-        res.status(201).json({ message: 'User registered successfully.' });
-        res.render("login");
+        res.redirect("/login"); // Redirect to the login page after successful registration
     } catch (error) {
-        console.error('Error registering product:', error);
+        console.error('Error registering user:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
 
-router.post('/userUpdate', async function (req, res) {
+
+router.post("/login", checkNotAuthenticated, async (req, res) => {
     const { username, password } = req.body;
 
-    try {
-        console.log('Update request:', req.body);
+    console.log("post login " + username);
 
-        const user = await User.findOne({ username });
+    try {
+        const user = await User.findOne({ username: username });
 
         if (user) {
-            // User found, update the status
-            user.password = password;
-            await product.save();
-            res.json({ message: 'User information updated successfully.' });
+            const isPasswordValid = bcrypt.compareSync(password, user.password);
+            if (isPasswordValid) {
+                console.log("loginsuccess ");
+                req.session.usernamename = user.username;
+                req.session.email = user.email;
+                req.session.loggedin = true; // Use boolean true instead of string "true"
+                req.session.role = user.role;
+                res.status(200).json({ message: 'Login successful.' });
+            } else {
+                console.log("login fail ");
+                res.status(401).json({ err: 'Invalid Username/Password. Please try logging in again.' });
+            }
         } else {
-            console.log(`Account with username "${username}" not found.`);
-            res.status(404).json({ error: 'User not found.' });
+            console.log("login fail ");
+            res.status(401).json({ err: 'Invalid Username/Password. Please try logging in again.' });
         }
     } catch (error) {
-        console.error('Error updating user information:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        console.error('Error while logging in:', error);
+        res.status(500).json({ err: 'Internal Server Error.' });
     }
 });
 
