@@ -5,9 +5,11 @@ const regEmailNoInput = document.querySelector("email");
 const regUsernameNoInput = document.querySelector("username");
 const logUsernameNoInput = document.querySelector("l_username");
 const logPasswordNoInput = document.querySelector("l_password");
+const uploadBtn= document. querySelector ("uploadBtn")
 // forms
 const regForm = document.forms.registerForm;
 const loginForm = document.forms.loginForm;
+
 // error paragraph elements
 const registerError = document.querySelector("r_error");
 const loginError = document.querySelector("l_error");
@@ -115,6 +117,35 @@ regUsernameNoInput?.addEventListener("keyup", async function (e) {
         }
     } catch (error) {
         console.error('Error while checking username:', error);
+    }
+});
+
+uploadBtn?.addEventListener("click", async function (e) {
+    try {
+        const fileInput = document.querySelector('#fileInput'); // Assuming fileInput is the input element for selecting files
+        const selectedFile = fileInput.files[0];
+        
+        if (!selectedFile) {
+            alert('Please select a file before uploading.');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('image', selectedFile);
+
+        const response = await fetch('/upload', {
+            method: 'POST',
+            body: formData,
+        });
+
+        if (response.ok) {
+            alert('File uploaded successfully!');
+        } else {
+            const errorData = await response.json();
+            alert(`Error uploading file: ${errorData.message}`);
+        }
+    } catch (error) {
+        console.error('Error:', error);
     }
 });
 

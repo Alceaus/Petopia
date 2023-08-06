@@ -1,27 +1,31 @@
 const mongoose = require("mongoose");
 
-const info=new mongoose.Schema({
-    petname:{
-        type:String,
-        required:true
+const info = new mongoose.Schema({
+    petname: {
+        type: String,
+        required: true
     },
-    furtype:{
-        type:String,
-        required:true
+    furtype: {
+        type: String,
+        required: true
     },
-    weight:{
-        type:Number,
-        required:true
+    weight: {
+        type: Number,
+        required: true
     },
-    likes:{
-        type:String,
-        required:true
+    likes: {
+        type: String,
+        required: true
     },
-    dislikes:{
-        type:String,
-        required:true
+    dislikes: {
+        type: String,
+        required: true
+    },
+    img: {
+        data: Buffer,
+        contentType: String
     }
-})
+});
 
 const petInfo = mongoose.model("pets", info);
 
