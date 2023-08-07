@@ -1,6 +1,7 @@
 // input fields and button
 const registerBtn = document.querySelector("#registerBtn");
 const loginBtn = document.querySelector("#loginBtn");
+const postBtn = document.querySelector("#postBtn");
 const updateBtn = document.querySelector("#updateBtn");
 const regEmailNoInput = document.querySelector("#email");
 const regUsernameNoInput = document.querySelector("#username");
@@ -10,10 +11,13 @@ const uploadBtn= document. querySelector ("#uploadBtn")
 // forms
 const regForm = document.forms.registerForm;
 const loginForm = document.forms.loginForm;
+const petForm = document.forms.petForm;
 
 // error paragraph elements
 const registerError = document.querySelector("r_error");
 const loginError = document.querySelector("l_error");
+const petError = document.querySelector("p_error");
+
 
 /*
     TODO:   The code below attaches a `click` event to `#registerBtn` button.
@@ -53,6 +57,37 @@ registerBtn?.addEventListener("click", async function (e) {
         } else {
             const errorData = await response.json();
             console.error('Registration error:', errorData);
+        }
+    } catch (error) {
+        console.error('Error while registering:', error);
+    }
+});
+
+postBtn?.addEventListener("click", async function (e) {
+    e.preventDefault();
+    console.log('clicked pet post');
+
+    const formData = new FormData(petForm);
+    
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+
+    try {
+        const response = await fetch('/createpost', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+            window.location.href = "/home";
+        } else {
+            const errorData = await response.json();
+            console.error('Post error:', errorData);
         }
     } catch (error) {
         console.error('Error while registering:', error);

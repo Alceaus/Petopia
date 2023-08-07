@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Homepage | Petopia</title>
     <link rel="stylesheet" type="text/css" href="../static/css/home.css">
-    <script src="static/JS/index.js" defer> </script>
+    <script src="../static/JS/index.js" defer></script>
+    <script src="static/JS/forms.js" defer> </script>
     <link rel="icon" type="image/png" href="../static/Images/paw.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,28 +26,46 @@
     <div class="container">
         <div class="post-header">Available Adoptables</div>
             <div class="container" style="width: 100%">
+                {{#each pets}}
                 <div class="post">
-                    <img src="../static/Images/pets/dog.png" class="dogs">
-                    <button class="caption"><a href="/Samantha">Samantha</a></button>
+                    <div class="wrapper">
+                        <div class="left">
+                            <img class="userpic" src="../static/Images/pets/dog2.jpg" alt="user" width="100">
+                            <h4>{{ petname }}</h4>
+                        </div>
+
+                        <div class="right">
+                            <div class="info">
+                                <h3>Information</h3>
+                                <div class="info_data">
+                                    <div class="data">
+                                        <h4>Fur Type</h4>
+                                        <p>{{ furtype }}</p>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Weight</h4>
+                                        <p>{{ weight }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="interests">
+                                <h3>Likes</h3>
+                                <div class="interests_data">
+                                    <div class="data">
+                                        <h4>Likes</h4>
+                                        <p>{{ likes }}</p>
+                                    </div>
+                                    <div class="data">
+                                        <h4>Dislikes</h4>
+                                        <p>{{ dislikes }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="post">
-                    <img src="../static/Images/pets/dog2.jpg" class="dogs">
-                    <button class="caption"><a href="/Abigail">Abigail</a></button>
-                </div>
-                <div class="post">
-                    <img src="../static/Images/pets/dog3.jpg" class="dogs">
-                    <button class="caption"><a href="/Penny">Penny</a></button>
-                </div>
-                <div class="post">
-                    <img src="../static/Images/pets/dog4.jpg" class="dogs">
-                    <button class="caption"><a href="/Sebastian">Sebastian</a></button>
-                </div>
-                <div class="post">
-                    <img src="../static/Images/pets/dog5.jpg" class="dogs">
-                    <button class="caption"><a href="Isaac">Isaac</a></button>
-                </div>
-    
-     
+                {{/each}}
             </div>
     </div>
 

@@ -8,12 +8,21 @@ const { checkAuthenticated, checkNotAuthenticated } = require('./auth');
 
 const urlencoder = express.urlencoded({extended: false,});
 
-router.get("/", checkAuthenticated, function (req, res) {
+router.get("/", checkNotAuthenticated, function (req, res) {
     res.render("login");
 });
 
-router.get("/home", checkAuthenticated, function (req, res) {
-    res.render("home");
+router.get("/home", checkAuthenticated, async function (req, res) {
+    try {
+        // Fetch all pet data from the database using the Pet model
+        const pets = await Pet.find({});
+
+        // Pass the pet data to the home view template
+        res.render("home", { pets: pets });
+    } catch (error) {
+        console.error('Error fetching pet data:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 });
 
 router.get("/createpost", (req, res) => {
@@ -38,26 +47,32 @@ router.get("/signout", urlencoder, (req, res) => {
 });
 
 router.get("/about",(req, res) => {
-  
-      res.render("about", {
+
+    res.render("about", {
         loggedin:req.session.loggedin,
         role : req.session.role,
 
-      });
-  });
-  router.get('/checkEmail', async function (req, res) {
-    const email = req.query.email;
+    });
+});
+
+router.post('/createpost', checkAuthenticated, async (req, res) => {
+    const { petname, furtype, weight, likes, dislikes  } = req.body;
+
+    console.log('Received pet data:', { petname, furtype, weight, likes, dislikes });
+
     try {
-        const user = await User.findOne({ email: email });
-        if (user) {
-            // Email exists in the database
-            res.json({ exists: true });
-        } else {
-            // Email does not exist in the database
-            res.json({ exists: false });
-        }
+        const pet = new Pet({
+            petname, 
+            furtype, 
+            weight, 
+            likes, 
+            dislikes
+        });
+
+        await pet.save();
+        res.redirect("/home"); // Redirect to the login page after successful registration
     } catch (error) {
-        console.error('Error checking email:', error);
+        console.error('Error registering user:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
@@ -116,7 +131,5 @@ router.post("/login", checkNotAuthenticated, async (req, res) => {
         res.status(500).json({ err: 'Internal Server Error.' });
     }
 });
-
-//app.use(urlencoder);
 
 module.exports = router;

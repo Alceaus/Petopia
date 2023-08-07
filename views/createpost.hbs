@@ -2,6 +2,7 @@
     <head>
         <title> Create a New Post | Petopia </title>
         <link rel="stylesheet" type="text/css" media="all" href= "../static/css/post.css">
+        <script src="static/JS/forms.js" defer> </script>
         <link rel="icon" type="image/png" href="../static/Images/paw.png">
     </head>
     
@@ -13,26 +14,26 @@
 
         <div style="height:50px"></div>
 
-        <form id="form" action="../Homepage/index.html" method="GET">
+        <form id="petForm" name="petForm" action="/createpost" method="post">
         <div class="postdiv">
             <div class="postnow">
                     <h1 style="height: 50px;">Posting a pet up for adoption</h1>
             </div>
             
-            <input id ="name" type="text" placeholder="Enter Pet Name">
+            <input id ="petname" type="text" name="petname" placeholder="Enter Pet Name">
             <br>
-            <input id="fur" type="text" placeholder="Enter Fur Type">
+            <input id="furtype" type="text" name="furtype" placeholder="Enter Fur Type">
             <br>
-            <input id="weight" type="text" placeholder="Enter Weight">
+            <input id="weight" type="text" name="weight" placeholder="Enter Weight">
             <br>
-            <input id="likes" type="text" placeholder="Enter Likes">
+            <input id="likes" type="text" name="likes" placeholder="Enter Likes">
             <br>
-            <input id="dislikes" type="text" placeholder="Enter Dislikes">
+            <input id="dislikes" type="text" name="dislikes" placeholder="Enter Dislikes">
             <br>
-            <input type ="file" id="pet" placeholder="upload your pet">
+            <input type ="file" id="pet" name="file" placeholder="upload your pet">
             
-            <p class="warning" id="error"></p>
-            <button type="submit" class="publish">Publish Post</button>
+            <p class="error" id="l_error">  </p>
+            <button class="submitBtn" id="postBtn" type="submit" class="publish">Publish Post</button>
         </form>
         </div>
     </body>
