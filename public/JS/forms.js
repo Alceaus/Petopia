@@ -146,7 +146,7 @@ loginBtn?.addEventListener("click", async function (e) {
 
         if (response.ok) {
             // Login successful, redirect to home page or any other desired page
-            window.location.href = "/";
+            window.location.href = "/home";
         } else {
             // Login failed, display error message
             const errorData = await response.json();

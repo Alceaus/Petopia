@@ -9,7 +9,7 @@ const { checkAuthenticated, checkNotAuthenticated } = require('./auth');
 const urlencoder = express.urlencoded({extended: false,});
 
 router.get("/", checkAuthenticated, function (req, res) {
-    res.render("home");
+    res.render("login");
 });
 
 router.get("/home", checkAuthenticated, function (req, res) {
